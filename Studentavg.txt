@@ -1,0 +1,13 @@
+ 
+Enter Roll number   :1
+Name                 :Mukesh
+Subjects 1            :ufyu
+Marks                 :89.00
+Subjects 2            :ufyu
+Marks                 :79.00
+Subjects 3            :ufyu
+Marks                 :69.00
+Total                 :237
+Avg                   :79.00
+Grade C
+            :
