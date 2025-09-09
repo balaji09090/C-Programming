@@ -9,8 +9,8 @@ int main()
 
       fp = fopen("Studentavg.txt","w");
 
-    printf("Enter student Details: ");
-    printf("\nEnter Student Roll number: ");
+    printf("Enter student Details :");
+    printf("\nEnter Student Roll number :");
     scanf("%d",&roll);
     printf("Student Name : ");
     gets(studentName);

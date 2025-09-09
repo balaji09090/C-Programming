@@ -1,0 +1,9 @@
+........ BILL .......
+ID	Name	Quantity	Price
+9	Iphone	1		130000.00
+6	Cover	1		599.00
+2	Charger	1		4999.00
+
+Total Amount : 135598.00
+Discount     : 27119.60
+Final Bill   : 108478.40

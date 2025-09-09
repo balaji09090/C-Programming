@@ -2,7 +2,7 @@
 int main()
 {
     int n, i, sum = 0;
-    printf("Enter a Number");
+    printf("Enter a Number :");
     scanf("%d", &n);
     for (i = 1; i <= n / 2; i++)
     {

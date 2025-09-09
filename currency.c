@@ -2,7 +2,7 @@
 int main()
 {
     int amount;
-    printf("Enter an Amount");
+    printf("Enter an Amount :");
     scanf("%d",&amount);
     printf("\n10*%d: ", amount/10);
     amount=amount%10;

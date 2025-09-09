@@ -1,8 +1,0 @@
-
-ID                    :9440640 
-Name                  :Balaji
-Basic Salary          :50000.00 
-DA (%)               :10 
-HRA (%)              :15 
-TAX (%)              :10
-Total Salary          :57500

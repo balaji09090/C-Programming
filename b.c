@@ -2,6 +2,6 @@
 int main()
 {
     int cnt = 0;
-    for (;;)
+    for (;;)//infinte loop
         printf("%d Hello World\n", cnt++);
 }

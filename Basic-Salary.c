@@ -6,7 +6,7 @@ int main ()
     char name[100];
     FILE *fp;
 
-      fp = fopen("EmployeeSalary.txt","w");
+      fp = fopen("Basic-Salary.txt","w");
 
     printf("Enter Employee Details : ");
     printf("\nID : ");

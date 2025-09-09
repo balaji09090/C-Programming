@@ -2,7 +2,7 @@
 int main()
 {
     char ch;
-    printf("Enter Anything: ");
+    printf("Enter Anything :");
     scanf("%c", &ch);
     if (ch >= 'A' && ch <= 'B' )
         printf("Upper Case");

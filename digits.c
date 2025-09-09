@@ -2,10 +2,10 @@
 int main()
 {
     int n;
-    printf("Enter a Number");
+    printf("Enter a Number :");
     scanf("%d",&n);
     printf("Digits: ");
-    while (n>0);
+    while (n>0)
     {
         printf("%d",n%10);
         n=n/10;

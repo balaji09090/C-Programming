@@ -1,60 +1,73 @@
-#include<stdio.h>
+#include <stdio.h>
+
 int main()
 {
-   int pID,quantity1,quantity2,quantity3;
-   char pName1,pName2,pName3;
-   float price1,price2,price3,total,discount,bill;
-   FILE *fp;
-     fp = fopen("bill.txt","w");
-  
-   printf("Enter the Details of Product");
-   printf("\nEnter Product ID :");
-   scanf("%d",&pID);
-   printf("Enter Product Name 1 :");
-   scanf("%s",pName1);
-   printf("Enter Quantity 1 :");
-   scanf("%d",&quantity1);
-   printf("Enter Price 1:");
-   scanf("%f",&price1);
+    int pID1, pID2, pID3;
+    int quantity1, quantity2, quantity3;
+    char pName1[50], pName2[50], pName3[50];
+    float price1, price2, price3, total, discount, bill;
+    FILE *fp;
 
-    printf("\nEnter Product ID :");
-   scanf("%d",&pID);
-   printf("Enter Product Name 2:");
-   scanf("%s",pName2);
-   printf("Enter Quantity 2 :");
-   scanf("%d",&quantity2);
-   printf("Enter Price 2 :");
-   scanf("%f",&price2);
-  
-    printf("\nEnter Product ID :");
-   scanf("%d",&pID);
-   printf("Enter Product Name 3 :");
-   scanf("%s",pName3);
-   printf("Enter Quantity 3 :");
-   scanf("%d",&quantity3);
-   printf("Enter Price 3 :");
-   scanf("%f",&price3);
-  
-  
-   total = (quantity1 * price1)+(quantity2 * price2)+(quantity3 * price3);
-   bill = total-discount;
-   
-   if(total >= 100000)
-      discount=20;
-    else if(total >= 80000)
-      discount=15;
-    else if(total >= 50000)
-      discount=10;
-    else if(total >= 30000)
-      discount=5;
-    else 
-       discount=0;
-       
-        fprintf(fp,"........Bill.......");
-        fprintf(fp,"\t Id%d  \tName%s   \tQuantity%d   \tPrice%f",&pID,pName1,pName2,pName3,quantity1,quantity2,quantity3,price1,price2,price3);
-        fprintf(fp,"\nTotal Amount         :%.2f",total);
-        fprintf(fp,"\nDiscount             :%.2f",discount);
-        fprintf(fp,"\nBill                 :%.2f",bill);
-        return 0;
-    }
-    
+    fp = fopen("bill.txt", "w");
+
+    printf("Enter the Details of Product 1\n");
+    printf("Enter Product ID: ");
+    scanf("%d", &pID1);
+    printf("Enter Product Name: ");
+    scanf("%s", pName1);
+    printf("Enter Quantity: ");
+    scanf("%d", &quantity1);
+    printf("Enter Price: ");
+    scanf("%f", &price1);
+
+    printf("\nEnter the Details of Product 2\n");
+    printf("Enter Product ID: ");
+    scanf("%d", &pID2);
+    printf("Enter Product Name: ");
+    scanf("%s", pName2);
+    printf("Enter Quantity: ");
+    scanf("%d", &quantity2);
+    printf("Enter Price: ");
+    scanf("%f", &price2);
+
+    printf("\nEnter the Details of Product 3\n");
+    printf("Enter Product ID: ");
+    scanf("%d", &pID3);
+    printf("Enter Product Name: ");
+    scanf("%s", pName3);
+    printf("Enter Quantity: ");
+    scanf("%d", &quantity3);
+    printf("Enter Price: ");
+    scanf("%f", &price3);
+
+    total = (quantity1 * price1) + (quantity2 * price2) + (quantity3 * price3);
+
+    if (total >= 100000)
+        discount = total * 0.20;
+    else if (total >= 80000)
+        discount = total * 0.15;
+    else if (total >= 50000)
+        discount = total * 0.10;
+    else if (total >= 30000)
+        discount = total * 0.05;
+    else
+        discount = 0;
+
+    bill = total - discount;
+
+    // Print to file
+    fprintf(fp, "........ BILL .......\n");
+    fprintf(fp, "ID\tName\tQuantity\tPrice\n");
+    fprintf(fp, "%d\t%s\t%d\t\t%.2f\n", pID1, pName1, quantity1, price1);
+    fprintf(fp, "%d\t%s\t%d\t\t%.2f\n", pID2, pName2, quantity2, price2);
+    fprintf(fp, "%d\t%s\t%d\t\t%.2f\n", pID3, pName3, quantity3, price3);
+    fprintf(fp, "\nTotal Amount : %.2f", total);
+    fprintf(fp, "\nDiscount     : %.2f", discount);
+    fprintf(fp, "\nFinal Bill   : %.2f\n", bill);
+
+    fclose(fp);
+
+    printf("\nBill generated successfully in bill.txt\n");
+
+    return 0;
+}
